@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example page about ARIA">
+    <meta name="keybowrds" content="ARIA, accesibility, examples">
+    <meta name="author" content="Giorgi Asanidze">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a hred="/" class="logo">Company Logo</a>
+        
+        <nav>
+            <li><a href="/who">Who am I</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </nav>
+    </header>
+
+    <div class="icons">
+        <a href="https://www.facebook.com/" aria-label="Link to Facebook">
+            <img src="./icons/facebook.png">
+        </a>
+        <a href="https://www.twitter.com/" aria-label="Link to twitter">
+            <img src="./icons/twitter.png">
+        </a>
+        <a href="https://www.instagram.com/" aria-label="Link to instagram">
+            <img src="./icons/instagram.png">
+        </a>
+    </div>
+
+    <div class="checkbox-container">
+        <div 
+            class="custom-checkbox"
+            id="checkbox"
+            role="checkbox"
+            aria-checked="false"
+        ></div>
+        <label for="checkbox">Custom Checkbox</label>
+    </div>
+
+    <ul id="tree" role="tree">
+        <li role="treeitem" aria-expanded="true">Root Node
+            <ul role="group">
+                <li role="treeitem">Child Node 1</li>
+                <li role="treeitem" aria-expanded="true">Child Node 2
+                    <ul role="group">
+                        <li role="treeitem">Grandchild Node 1</li>
+                        <li role="treeitem">Grandchild Node 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="alert" role="alert">Could not connect!</div>
+</body>
+<script src="script.js"></script>
+</html>
